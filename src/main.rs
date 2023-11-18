@@ -2,7 +2,7 @@
 #![no_main]
 #![feature(type_alias_impl_trait)]
 
-// use defmt::*;
+use defmt::*;
 use embassy_executor::Spawner;
 use embassy_stm32::exti::ExtiInput;
 use embassy_stm32::gpio::{
@@ -29,5 +29,6 @@ async fn main(_spawner: Spawner) {
             Level::High => led.set_low(),
             Level::Low => led.set_high()
         }
+        info!("boop detected");
     }
 }
