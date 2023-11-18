@@ -1,9 +1,8 @@
 [package]
 name = "nucleo-32-bs"
+authors = ["Erik Scott Korzon <eskorzon@gmail.com>"]
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
@@ -14,3 +13,6 @@ embassy-executor = { version = "0.3.3", git = "https://github.com/embassy-rs/emb
 embassy-stm32 = { version = "0.1.0", git = "https://github.com/embassy-rs/embassy", features = ["nightly", "defmt", "unstable-pac", "stm32l432kc", "memory-x", "time-driver-any", "exti", "unstable-traits", "chrono"] }
 embassy-time = { version = "0.1.5", git = "https://github.com/embassy-rs/embassy", features = ["defmt", "defmt-timestamp-uptime", "tick-hz-32_768", "unstable-traits", "nightly"] }
 panic-probe = { version = "0.3.1", features = ["print-defmt"] }
+
+[profile.release]
+debug = 2
