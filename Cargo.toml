@@ -1,5 +1,5 @@
 [package]
-name = "nucleo-32-bs"
+name = "nucleo-32-rs"
 authors = ["Erik Scott Korzon <eskorzon@gmail.com>"]
 version = "0.1.0"
 edition = "2021"
