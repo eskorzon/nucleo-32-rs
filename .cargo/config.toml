@@ -3,3 +3,6 @@ runner = "probe-run --chip STM32L432KCUx"
 
 [build]
 target = "thumbv7em-none-eabihf"
+
+[env]
+DEFMT_LOG = "trace"
